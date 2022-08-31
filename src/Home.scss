@@ -1,0 +1,164 @@
+$bg: rgb(16, 16, 16);
+
+.banner {
+    height: 400px;
+    background-color: $bg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: $bg;
+        opacity: 0.4;
+    }
+
+    h1,
+    p {
+        color: white;
+        font-size: 2rem;
+        width: 40%;
+        z-index: 10;
+    }
+
+    p {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+    }
+
+    div {
+        display: flex;
+    }
+
+    button {
+        padding: 1rem;
+        width: 130px;
+        outline: none;
+        background-color: white;
+        border: none;
+        height: 10px;
+        border-radius: 5px;
+        margin: 1rem;
+        font-size: 1rem;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        cursor: pointer;
+        
+        &:hover{
+            opacity: 0.5;
+        }
+        &:nth-child(odd) {
+            background-color: white;
+            color: black;
+        }
+
+        &:nth-child(even) {
+            background-color: rgb(134, 121, 121);
+            color: white;
+        }
+
+        svg {
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+    }
+
+}
+
+.row {
+    padding: 1rem;
+    background-color: $bg;
+
+    >h2 {
+        margin: 0.3rem;
+        font-weight: 400;
+    }
+
+    >div {
+        display: flex;
+        overflow-x: auto;
+    }
+}
+
+.card {
+    width: 200px;
+    cursor: pointer;
+    margin: 0.3rem;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+.genrebox {
+    overflow-x: auto;
+    display: flex;
+    height: 100px;
+    background-color: $bg;
+    flex: 0%;
+
+    >a {
+        color: $bg;
+        background-color: white;
+        padding: 1rem 0;
+        margin: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        transition: all 0.5s;
+        min-width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: rgb(235, 230, 230);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        height: 300px;
+        padding: 3rem;
+    
+    
+        h1,
+        p {
+            font-size: 0.9rem;
+            width: 70%;
+        }
+    
+        p {
+            font-size: 0.6rem;
+        }
+    
+      
+        button {
+            padding: 0.4rem;
+            width: 99px;
+            height: 50px;
+            margin: 0 10px 0 0;text-align: center;
+
+            
+           
+         
+        }
+    }
+        
+}

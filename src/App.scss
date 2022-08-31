@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+$bg: rgb(16, 16, 16);
+
+.header {
+  height: 70px;
+  background-color: $bg;
+  display: flex;
+  align-items: center;
+  padding: .2rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  >img {
+    height: 50%;
+    margin-left: 0.5rem;
+  }
+
+  >div {
+    width: 100%;
+    margin-left: 4vmax;
+
+    >a {
+      margin: 2vmax;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  >svg {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: grey;
+    }
+  }
+}
+
+a , h2{
+  color: white;
+}
+a{
+
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+  .header{
+    >div{
+      >a{
+        display: none;
+      }
+
+    }
+  }
+}
